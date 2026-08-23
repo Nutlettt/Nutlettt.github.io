@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 720" role="img" aria-labelledby="title desc">
+  <title id="title">APHR multimodal AI pipeline</title>
+  <desc id="desc">Web text and event graphics are processed by RoBERTa, a vision-language model, and a large language model to produce a source-attributed briefing.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="18" markerHeight="18" refX="16" refY="9" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M1 1l15 8-15 8z" fill="#59636b"/>
+    </marker>
+    <style>
+      .label { font-family: Lato, Arial, Helvetica, sans-serif; fill: #202124; font-weight: 700; }
+      .input-label { font-size: 42px; }
+      .model-label { font-size: 46px; }
+      .output-label { font-size: 45px; }
+      .citation { font-family: Lato, Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 700; fill: #1772d0; }
+      .connector { fill: none; stroke: #59636b; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="720" height="720" fill="#ffffff"/>
+
+  <!-- Connectors are drawn first so that card edges remain clean. -->
+  <path class="connector" d="M185 204v42"/>
+  <path class="connector" d="M535 204v42"/>
+  <path class="connector" d="M173 362v12c0 24 20 44 44 44h4"/>
+  <path class="connector" d="M547 362v12c0 24-20 44-44 44h-4"/>
+  <path class="connector" d="M360 516v37"/>
+
+  <!-- Heterogeneous inputs. -->
+  <g>
+    <rect x="24" y="24" width="322" height="180" rx="22" fill="#f7f9f8" stroke="#59636b" stroke-width="5"/>
+    <path d="M139 45h77l27 27v70H139z" fill="#ffffff" stroke="#46b9a6" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M216 45v28h27" fill="none" stroke="#46b9a6" stroke-width="6" stroke-linejoin="round"/>
+    <path d="M160 88h57M160 106h57M160 124h42" fill="none" stroke="#59636b" stroke-width="6" stroke-linecap="round"/>
+    <text class="label input-label" x="185" y="181" text-anchor="middle">Web text</text>
+  </g>
+
+  <g>
+    <rect x="374" y="24" width="322" height="180" rx="22" fill="#f7f9f8" stroke="#59636b" stroke-width="5"/>
+    <rect x="449" y="105" width="36" height="40" rx="4" fill="#52b788"/>
+    <rect x="491" y="82" width="36" height="63" rx="4" fill="#f1db36"/>
+    <rect x="533" y="57" width="36" height="88" rx="4" fill="#f2a23a"/>
+    <rect x="575" y="95" width="36" height="50" rx="4" fill="#df4d4d"/>
+    <path d="M441 145h178" stroke="#59636b" stroke-width="6" stroke-linecap="round"/>
+    <text class="label input-label" x="535" y="181" text-anchor="middle">Event graphics</text>
+  </g>
+
+  <!-- AI modules. Orange denotes fine-tuning; blue denotes pretrained models. -->
+  <g>
+    <rect x="44" y="266" width="258" height="96" rx="21" fill="#fde8cc" stroke="#ef9e54" stroke-width="6"/>
+    <text class="label model-label" x="173" y="329" text-anchor="middle">RoBERTa</text>
+  </g>
+
+  <g>
+    <rect x="418" y="266" width="258" height="96" rx="21" fill="#cde3ef" stroke="#6895c2" stroke-width="6"/>
+    <text class="label model-label" x="547" y="329" text-anchor="middle">VLM</text>
+  </g>
+
+  <g>
+    <rect x="231" y="418" width="258" height="98" rx="22" fill="#cde3ef" stroke="#6895c2" stroke-width="6"/>
+    <text class="label model-label" x="360" y="482" text-anchor="middle">LLM</text>
+  </g>
+
+  <!-- Source attribution is made visible through citations in the output document. -->
+  <g>
+    <rect x="24" y="572" width="672" height="128" rx="23" fill="#eef8f5" stroke="#46b9a6" stroke-width="6"/>
+    <path d="M60 587h74l27 27v71H60z" fill="#ffffff" stroke="#59636b" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M134 587v28h27" fill="none" stroke="#59636b" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M79 628h52M79 650h45M79 672h38" fill="none" stroke="#7b878e" stroke-width="6" stroke-linecap="round"/>
+    <text class="citation" x="127" y="636">[1]</text>
+    <text class="citation" x="120" y="679">[2]</text>
+    <text class="label output-label" x="421" y="651" text-anchor="middle">Cited briefing</text>
+  </g>
+</svg>
