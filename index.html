@@ -109,7 +109,7 @@
                 <br>
                 <em>Manuscript in preparation</em>
                 <p>
-                  We use SAM 3 to organize objects, parts, and fine-grained visual cues in a hierarchy, then route localized regions to DINOv3-based specialists. Shared citation IDs link the VLM’s diagnostic claims to supporting masks without new diagnosis-level annotations or VLM fine-tuning.
+                  We combine hierarchical SAM 3 grounding with context-aware filtering and DINOv3-based specialist models to structure visual inputs for VLM reasoning. Citation-aligned masks and relational cues connect generated claims to the image regions that support them, without new end-to-end diagnosis annotations or VLM fine-tuning.
                 </p>
               </td>
             </tr>
@@ -123,9 +123,7 @@
                 </div>
               </td>
               <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://github.com/XiaoleiC/GeoScout">
-                  <span class="papertitle">Caption-Conditioned Next-Best-View Policies for Generalizable 3D Reconstruction</span>
-                </a>
+                <span class="papertitle">Caption-Conditioned Next-Best-View Policies for Generalizable 3D Reconstruction</span>
                 <br>
                 <a href="https://xiaoleic.github.io/">Xiaolei Chu</a>, <strong>Guanren Zhou</strong>, <a href="https://stairlab.berkeley.edu/people/khalid-m-mosalam/">Khalid M. Mosalam</a>, <a href="https://ce.berkeley.edu/people/faculty/ziqiwang">Ziqi Wang</a>
                 <br>
@@ -133,7 +131,7 @@
                 <br>
                 <a href="https://github.com/XiaoleiC/GeoScout">code</a>
                 <p>
-                  GeoScout conditions a PPO next-best-view policy on refined VLM geometry captions, using language as a prior over unobserved shape to reconstruct unseen object instances with fewer views than a matched no-caption policy.
+                  GeoScout combines a 3D occupancy belief with refined VLM geometry captions to condition a PPO next-best-view policy. The captions provide semantic priors over unobserved shape, helping the policy reconstruct held-out object instances with fewer views than an otherwise matched no-caption policy.
                 </p>
               </td>
             </tr>
@@ -195,7 +193,7 @@
                 </div>
               </td>
               <td style="padding:8px;width:80%;vertical-align:middle">
-                <a href="https://k-mosalam.github.io/aphr-briefings/">
+                <a href="https://doi.org/10.1061/NHREFO.NHENG-2256">
                   <span class="papertitle">Automated Virtual Earthquake Reconnaissance Reporting Using Natural Language Processing</span>
                 </a>
                 <br>
@@ -203,10 +201,10 @@
                 <br>
                 <em>Natural Hazards Review</em>, 2025
                 <br>
-                <a href="https://k-mosalam.github.io/aphr-briefings/">project page</a> /
-                <a href="https://doi.org/10.1061/NHREFO.NHENG-2256">paper</a>
+                <a href="https://doi.org/10.1061/NHREFO.NHENG-2256">paper</a> /
+                <a href="https://k-mosalam.github.io/aphr-briefings/">product</a>
                 <p>
-                  An event-triggered pipeline combines fine-tuned RoBERTa, VLM extraction from event graphics, and citation-constrained LLM synthesis to turn heterogeneous web sources into source-attributed briefings and temporal analyses.
+                  We build an event-centric multimodal system that uses fine-tuned RoBERTa models and VLMs to convert web text and event graphics into provenance-preserving records. The shared records support source-grounded LLM synthesis and longitudinal analysis as new information arrives.
                 </p>
               </td>
             </tr>
@@ -244,13 +242,13 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr id="target-event-attribution">
+            <tr id="target-event-grounding">
               <td style="padding:16px;width:100%;vertical-align:middle">
-                <span class="papertitle">Target-Conditioned Event Attribution in Multi-Event Documents</span>
+                <span class="papertitle">Target-Conditioned Event Grounding in Multi-Event Documents</span>
                 <br>
                 <em>Ongoing work</em>
                 <p>
-                  This project formulates proposition-to-event grounding as a four-way target-conditioned classification task that exposes false attribution hidden by document-level relevance; benchmark construction is underway.
+                  We formulate target-conditioned event grounding at the proposition level, distinguishing statements about the target event, target-related context, other events, or no event instance. We are developing a two-pass annotation and evaluation framework that separates grounding from proposition-segmentation errors.
                 </p>
               </td>
             </tr>
